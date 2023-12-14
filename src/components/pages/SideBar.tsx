@@ -2,16 +2,21 @@ import flagmanConnectLogo from "../../assets/Flagman_Connect_Logo.svg";
 import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../features/store/store";
+import { setDetails } from "../../features/reducers/detailsSlice";
 
-interface SideBarProps {
-  selectedDetails: string;
-  onDetailsChange: (detailsType: string) => void;
-}
 
-const SideBar = ({ selectedDetails, onDetailsChange }: SideBarProps) => {
+const SideBar = () => {
+
+  const dispatch = useDispatch();
+  const selectedDetails = useSelector((state:RootState )=> state.details.selectedDetails )
+
   const handleButtonClick = (detailsType: string) => {
-    onDetailsChange(detailsType);
+    dispatch(setDetails(detailsType));
   };
+
+
   return (
     <div className="flex flex-col m-4 h-screen">
       <img
