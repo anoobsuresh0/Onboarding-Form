@@ -1,10 +1,12 @@
-import React from "react";
 import flagmanConnectLogo from "../../assets/Flagman_Connect_Logo.svg";
 import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 
-const SideBar = () => {
+
+
+
+const SideBar = ({setSelectedForm}) => {
   return (
     <div className="flex flex-col m-4 h-screen">
       <img
@@ -16,7 +18,7 @@ const SideBar = () => {
       <div className="flex justify-center h-screen">
         <ul>
           <li className="">
-            <button className="side-options" onClick={() => {console.log("person")}}>
+            <button className="side-options" onClick={() => setSelectedForm('personalDetails')}>
             
               <PersonIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
@@ -27,7 +29,7 @@ const SideBar = () => {
           </li>
 
           <li className="">
-            <button className="side-options" onClick={() => {console.log("school")}} >
+            <button className="side-options" onClick={() => setSelectedForm('educationDetails')} >
               <SchoolIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your Educational details</h3>
@@ -37,7 +39,7 @@ const SideBar = () => {
           </li>
 
           <li className="">
-            <button className="side-options" onClick={() => {console.log("work")}} >
+            <button className="side-options" onClick={() => setSelectedForm('workDetails')} >
               <WorkIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your company details</h3>
