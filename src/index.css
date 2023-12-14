@@ -2,8 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-    background-color: white;
-    color: black;
-    /* Add any additional styles for the active state */
-  }
+@layer components {
+    .side-btn {
+        @apply flex items-center justify-start w-auto my-6 h-auto py-2 px-4 text-left  text-white bg-black rounded-[10px];
+      }
+
+      .side-options{
+        @apply flex items-center my-6 h-auto py-2 px-4 text-left text-white rounded-[10px];
+      }
+
+      .side-icon{
+        @apply w-[20px] h-[20px]  bg-blue-500 rounded-full p-2 mr-3;
+      }
+
+      .input-textBox {
+        @apply block w-full my-8 h-[50px] p-4 text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500  dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500;
+      }
+
+      .submit-btn{
+        @apply flex  w-[200px] my-8 h-[50px] p-4 items-center justify-center  text-white bg-blue-500 rounded-2xl hover:bg-white hover:text-blue-500 hover:border-blue-500 border-2 border-blue-500;
+      }
+    }
+
+    @layer base {
+        h4 {
+          @apply text-[14px];
+        }
+        h3 {
+          @apply text-[16px] font-semibold;
+        }
+        h2 {
+          @apply text-[24px] font-semibold;
+        }
+        h1 {
+          @apply text-[35px] font-semibold;
+        }
+      }
+    
