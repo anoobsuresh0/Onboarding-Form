@@ -36,7 +36,7 @@ const SideBar = () => {
             >
               <PersonIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
-                <h3>Your personal details</h3>
+                <h3>Personal details</h3>
                 <h4>Personal details of the user</h4>
               </div>
             </button>
@@ -51,7 +51,7 @@ const SideBar = () => {
               {" "}
               <SchoolIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
-                <h3>Your Educational details</h3>
+                <h3>Educational details</h3>
                 <h4>User educational details</h4>
               </div>
             </button>
@@ -60,13 +60,13 @@ const SideBar = () => {
           
           <button
               className={`side-options ${
-                selectedDetails === "education" ? "selected" : ""}`}
+                selectedDetails === "work" ? "selected" : ""}`}
               onClick={() => handleButtonClick("work")}
             >              
             <WorkIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
-                <h3>Your company details</h3>
-                <h4>Company's basic information</h4>
+                <h3>Company details</h3>
+                <h4>Previous Experience</h4>
               </div>
             </button>
           
