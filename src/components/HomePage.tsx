@@ -5,7 +5,7 @@ import SideBar from "./pages/SideBar";
 
 const HomePage = () => {
   return (
-    <div className="grid grid-cols-5 h-screen">
+    <div className="grid grid-cols-5 h-screen ">
       <div className="bg-primary " >
         <SideBar />
       </div>
