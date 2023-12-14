@@ -6,7 +6,7 @@ import WorkIcon from "@mui/icons-material/Work";
 
 
 
-const SideBar = ({setSelectedForm}) => {
+const SideBar = () => {
   return (
     <div className="flex flex-col m-4 h-screen">
       <img
@@ -18,7 +18,7 @@ const SideBar = ({setSelectedForm}) => {
       <div className="flex justify-center h-screen">
         <ul>
           <li className="">
-            <button className="side-options" onClick={() => setSelectedForm('personalDetails')}>
+            <button className="side-options" >
             
               <PersonIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
@@ -29,7 +29,7 @@ const SideBar = ({setSelectedForm}) => {
           </li>
 
           <li className="">
-            <button className="side-options" onClick={() => setSelectedForm('educationDetails')} >
+            <button className="side-options"  >
               <SchoolIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your Educational details</h3>
@@ -39,7 +39,7 @@ const SideBar = ({setSelectedForm}) => {
           </li>
 
           <li className="">
-            <button className="side-options" onClick={() => setSelectedForm('workDetails')} >
+            <button className="side-options"  >
               <WorkIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your company details</h3>
