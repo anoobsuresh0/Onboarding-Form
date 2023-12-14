@@ -27,7 +27,7 @@ const SideBar = () => {
 
       <div className="flex justify-center h-screen">
         <ul>
-          <li className="">
+          
             <button
               className={`side-options ${
                 selectedDetails === "personal" ? "selected" : ""
@@ -40,9 +40,9 @@ const SideBar = () => {
                 <h4>Personal details of the user</h4>
               </div>
             </button>
-          </li>
+          
 
-          <li className="">
+          
             <button
               className={`side-options ${
                 selectedDetails === "education" ? "selected" : ""}`}
@@ -55,9 +55,9 @@ const SideBar = () => {
                 <h4>User educational details</h4>
               </div>
             </button>
-          </li>
+          
 
-          <li className="">
+          
           <button
               className={`side-options ${
                 selectedDetails === "education" ? "selected" : ""}`}
@@ -69,7 +69,7 @@ const SideBar = () => {
                 <h4>Company's basic information</h4>
               </div>
             </button>
-          </li>
+          
         </ul>
       </div>
     </div>
