@@ -3,10 +3,6 @@ import PersonIcon from "@mui/icons-material/Person";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 
-
-
-
-
 interface SideBarProps {
   selectedDetails: string;
   onDetailsChange: (detailsType: string) => void;
@@ -16,7 +12,7 @@ const SideBar = ({ selectedDetails, onDetailsChange }: SideBarProps) => {
   const handleButtonClick = (detailsType: string) => {
     onDetailsChange(detailsType);
   };
-    return (
+  return (
     <div className="flex flex-col m-4 h-screen">
       <img
         src={flagmanConnectLogo}
@@ -27,10 +23,12 @@ const SideBar = ({ selectedDetails, onDetailsChange }: SideBarProps) => {
       <div className="flex justify-center h-screen">
         <ul>
           <li className="">
-          <button
-        className={`side-options ${selectedDetails === 'personal' ? 'selected' : ''}`}
-        onClick={() => handleButtonClick('personal')}
-      >            
+            <button
+              className={`side-options ${
+                selectedDetails === "personal" ? "selected" : ""
+              }`}
+              onClick={() => handleButtonClick("personal")}
+            >
               <PersonIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your personal details</h3>
@@ -40,10 +38,13 @@ const SideBar = ({ selectedDetails, onDetailsChange }: SideBarProps) => {
           </li>
 
           <li className="">
-          <button
-        className={`side-options ${selectedDetails === 'education' ? 'selected' : ''}`}
-        onClick={() => handleButtonClick('education')}
-      >              <SchoolIcon className="side-icon" style={{ fontSize: 40 }} />
+            <button
+              className={`side-options ${
+                selectedDetails === "education" ? "selected" : ""}`}
+              onClick={() => handleButtonClick("education")}
+            >
+              {" "}
+              <SchoolIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your Educational details</h3>
                 <h4>User educational details</h4>
@@ -52,8 +53,12 @@ const SideBar = ({ selectedDetails, onDetailsChange }: SideBarProps) => {
           </li>
 
           <li className="">
-            <button className="side-options"  >
-              <WorkIcon className="side-icon" style={{ fontSize: 40 }} />
+          <button
+              className={`side-options ${
+                selectedDetails === "education" ? "selected" : ""}`}
+              onClick={() => handleButtonClick("work")}
+            >              
+            <WorkIcon className="side-icon" style={{ fontSize: 40 }} />
               <div>
                 <h3>Your company details</h3>
                 <h4>Company's basic information</h4>
