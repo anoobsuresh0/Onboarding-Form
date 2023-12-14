@@ -16,6 +16,7 @@ const WorkDetails = () => {
               name="fname"
               placeholder="First Name"
               className="input-textBox"
+              required
             />
           </div>
 
@@ -26,6 +27,7 @@ const WorkDetails = () => {
               name="lname"
               placeholder="Last Name"
               className="input-textBox"
+              required
             />
           </div>
           {/* <label htmlFor="lname">Last Name</label> */}
@@ -37,6 +39,7 @@ const WorkDetails = () => {
               name="email"
               placeholder="Email id"
               className="input-textBox"
+              required
             />
           </div>
 

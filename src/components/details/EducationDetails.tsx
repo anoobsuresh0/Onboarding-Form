@@ -1,5 +1,17 @@
+import { useDispatch } from "react-redux";
+import { setDetails } from "../../features/reducers/detailsSlice";
 
 const EducationDetails = () => {
+
+  const dispatch = useDispatch();
+
+  const handleButtonClick = (detailsType: string) => {
+    dispatch(setDetails(detailsType));
+  };
+
+
+
+
   return (
     <form>
         <div>
@@ -16,6 +28,7 @@ const EducationDetails = () => {
               name="fname"
               placeholder="First Name"
               className="input-textBox"
+              required
             />
           </div>
 
@@ -26,6 +39,7 @@ const EducationDetails = () => {
               name="lname"
               placeholder="Last Name"
               className="input-textBox"
+              required
             />
           </div>
           {/* <label htmlFor="lname">Last Name</label> */}
@@ -37,6 +51,7 @@ const EducationDetails = () => {
               name="email"
               placeholder="Email id"
               className="input-textBox"
+              required
             />
           </div>
 
@@ -104,10 +119,11 @@ const EducationDetails = () => {
           </div>
 
           <button
+          onClick={() => handleButtonClick("work")}
             type="submit"
             className="submit-btn"
           >
-            Submit
+            Next
           </button>
         </form>
   )
